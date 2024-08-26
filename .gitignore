@@ -1,0 +1,3 @@
+# Exclude any workfiles source
+*.psd
+*.ai
