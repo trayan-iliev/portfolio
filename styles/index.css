@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Saira+Condensed:wght@300;400;700&display=swap");
 
 :root {
-  --font-lobster: "Lobster", sans-serif;
-  --font-saira: "Saira Condensed", sans-serif;
+  --font-fancy: "Lobster", sans-serif;
+  --font-main: "Saira Condensed", sans-serif;
 
   --size-menu-title: 46px;
   --size-menu-sub: 26px;
@@ -14,38 +14,41 @@
   --color-dark-75: rgba(14, 14, 14, 0.75);
   --color-white-100: rgba(255, 255, 255, 1);
   --color-white-75: rgba(255, 255, 255, 0.75);
-}
 
-body {
   background: var(--color-dark-100);
 }
 
 /* 
-  !!! hyperlinks 
+  !!! styles HYPERLINKS 
 */
 
+hr {
+  border: 0px;
+  height: 1px;
+  background: var(--color-white-100);
+}
+
 a:link {
+  color: inherit;
   text-decoration: none;
-  color: var(--color-white-100);
 }
 
 a:visited {
+  color: inherit;
   text-decoration: none;
-  color: var(--color-white-100);
 }
 
 a:hover {
   color: var(--color-white-100);
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 a:active {
   color: var(--color-white-100);
-  text-decoration: underline;
 }
 
 /* 
-  !!! style rules menu 
+  !!! style NAVBAR 
 */
 
 .navbar {
@@ -64,7 +67,7 @@ a:active {
 }
 
 .navbar__logo--text {
-  font-family: var(--font-lobster);
+  font-family: var(--font-fancy);
   font-size: var(--size-menu-title);
   color: var(--color-white-100);
 }
@@ -77,9 +80,9 @@ a:active {
 }
 
 .navbar__right--title {
-  font-family: var(--font-saira);
+  font-family: var(--font-main);
   font-size: var(--size-menu-sub);
-  color: var(--color-white-100);
+  color: var(--color-white-75);
   letter-spacing: 5px;
 }
 
@@ -88,20 +91,47 @@ a:active {
   flex-direction: row;
   align-items: center;
   gap: 10px;
-  font-family: var(--font-saira);
+  font-family: var(--font-main);
   font-size: var(--size-menu-links);
-  color: var(--color-white-100);
+  color: var(--color-white-75);
 }
 
 /* 
-  !!! style rules hero 
+  !!! style HERO 
 */
+
 .hero img {
   width: 100%;
 }
 
 /* 
-  !!! style rules shared 
+  !!! style MAIN HEADER 
+*/
+
+.header--main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 30px 0px;
+  gap: 10px;
+}
+
+.header--main--icon {
+  width: 50px;
+}
+
+.header--main--text {
+  font-family: var(--font-fancy);
+  font-size: var(--size-h1);
+  color: var(--color-white-100);
+}
+
+.header--main--fill {
+  width: 100%;
+}
+
+/* 
+  !!! style CONTAINERS 
 */
 
 .container {
