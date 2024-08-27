@@ -1,38 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Saira+Condensed:wght@300;400;700&display=swap");
+
 :root {
-  --title: 48px;
-  --cat: 48px;
-  --h1: 48px;
-  --h2: 36px;
+  --font-lobster: "Lobster", sans-serif;
+  --font-saira: "Saira Condensed", sans-serif;
+
+  --size-menu-title: 46px;
+  --size-menu-sub: 26px;
+  --size-menu-links: 18px;
+  --size-h1: 36px;
+  --size-h2: 24px;
+
+  --color-dark-100: rgba(14, 14, 14, 1);
+  --color-dark-75: rgba(14, 14, 14, 0.75);
+  --color-white-100: rgba(255, 255, 255, 1);
+  --color-white-75: rgba(255, 255, 255, 0.75);
 }
 
 body {
+  background: var(--color-dark-100);
+}
+
+/* 
+  !!! hyperlinks 
+*/
+
+a:link {
+  text-decoration: none;
+  color: var(--color-white-100);
+}
+
+a:visited {
+  text-decoration: none;
+  color: var(--color-white-100);
+}
+
+a:hover {
+  color: var(--color-white-100);
+  text-decoration: underline;
+}
+
+a:active {
+  color: var(--color-white-100);
+  text-decoration: underline;
+}
+
+/* 
+  !!! style rules menu 
+*/
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+
+.navbar__logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar__logo--text {
+  font-family: var(--font-lobster);
+  font-size: var(--size-menu-title);
+  color: var(--color-white-100);
+}
+
+.navbar__right {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background: #040404;
+  align-items: flex-end;
+  gap: 10px;
 }
 
-.menu {
+.navbar__right--title {
+  font-family: var(--font-saira);
+  font-size: var(--size-menu-sub);
+  color: var(--color-white-100);
+  letter-spacing: 5px;
+}
+
+.navbar__right--menu {
   display: flex;
-  width: 900px;
-  padding: 30px 0px;
+  flex-direction: row;
   align-items: center;
-  gap: 30px;
+  gap: 10px;
+  font-family: var(--font-saira);
+  font-size: var(--size-menu-links);
+  color: var(--color-white-100);
 }
 
-.menu-logo {
-  /* width: 390.192px; */
-  height: 100px;
-  flex-shrink: 0;
+/* 
+  !!! style rules hero 
+*/
+.hero img {
+  width: 100%;
 }
 
-.menu-title {
-  flex: 1 0 0;
-  color: #fff;
-  text-align: right;
-  font-family: "Saira Condensed";
-  font-size: var(--title);
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
+/* 
+  !!! style rules shared 
+*/
+
+.container {
+  max-width: 1140px;
+  margin: auto;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 970px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 740px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 568px) {
+  .container {
+    max-width: 90%;
+  }
 }
