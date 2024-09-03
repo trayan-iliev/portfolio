@@ -4,14 +4,16 @@
   --font-fancy: "Lobster", sans-serif;
   --font-main: "Saira Condensed", sans-serif;
 
-  --size-menu-title: 46px;
-  --size-menu-sub: 26px;
-  --size-menu-links: 18px;
+  --size-menu-logo: 7vmax;
+  --size-menu-title: 4.5vmax;
+  --size-menu-sub: 2vmax;
+  --size-menu-links: 2vmax;
   --size-h1: 36px;
   --size-h2: 24px;
 
   --color-dark-100: rgba(14, 14, 14, 1);
   --color-dark-75: rgba(14, 14, 14, 0.75);
+  --color-dark-25: rgba(14, 14, 14, 0.25);
   --color-white-100: rgba(255, 255, 255, 1);
   --color-white-75: rgba(255, 255, 255, 0.75);
 
@@ -48,25 +50,45 @@ a:active {
 }
 
 /* 
+  !!! style HERO 
+*/
+
+.hero {
+  height: 100vmin;
+  background-image: url("../images/hero.jpg");
+  background-color: var(--color-dark-25);
+  background-blend-mode: multiply;
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* 
   !!! style NAVBAR 
 */
 
 .navbar {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 30px 0;
+  padding: 2vw 0;
 }
 
 .navbar__logo {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   gap: 10px;
 }
 
+.navbar__logo img {
+  width: var(--size-menu-logo);
+}
+
 .navbar__logo--text {
+  text-align: center;
+  line-height: 80%;
   font-family: var(--font-fancy);
   font-size: var(--size-menu-title);
   color: var(--color-white-100);
@@ -75,33 +97,41 @@ a:active {
 .navbar__right {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   gap: 10px;
 }
 
 .navbar__right--title {
+  line-height: 300%;
   font-family: var(--font-main);
   font-size: var(--size-menu-sub);
-  color: var(--color-white-75);
+  color: var(--color-white-100);
   letter-spacing: 5px;
 }
 
 .navbar__right--menu {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   gap: 10px;
   font-family: var(--font-main);
   font-size: var(--size-menu-links);
-  color: var(--color-white-75);
+  color: var(--color-white-100);
 }
 
-/* 
-  !!! style HERO 
-*/
+.navbar__right--button {
+  text-align: center;
+  width: 10vmax;
+  padding: 1vmax 2vw;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--color-white-100);
+}
 
-.hero img {
-  width: 100%;
+.navbar__right--button:hover {
+  background: var(--color-white-100);
+  color: var(--color-dark-100);
+  transition: all 0.2s ease-in-out;
 }
 
 /* 
@@ -112,7 +142,7 @@ a:active {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 30px 0px;
+  padding: 20px 0;
   gap: 10px;
 }
 
