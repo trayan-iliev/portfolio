@@ -55,7 +55,7 @@ a:active {
 
 .hero {
   height: 100vmin;
-  background-image: url("../images/hero.jpg");
+  background-image: url("/images/hero.jpg");
   background-color: var(--color-dark-25);
   background-blend-mode: multiply;
   background-position: top center;
@@ -75,18 +75,18 @@ a:active {
   padding: 2vw 0;
 }
 
-.navbar__logo {
+.navbar-logo {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
 }
 
-.navbar__logo img {
+.navbar-logo img {
   width: var(--size-menu-logo);
 }
 
-.navbar__logo--text {
+.navbar-logo--text {
   text-align: center;
   line-height: 80%;
   font-family: var(--font-fancy);
@@ -94,14 +94,14 @@ a:active {
   color: var(--color-white-100);
 }
 
-.navbar__right {
+.navbar-right {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
 }
 
-.navbar__right--title {
+.navbar-right--title {
   line-height: 300%;
   font-family: var(--font-main);
   font-size: var(--size-menu-sub);
@@ -109,7 +109,7 @@ a:active {
   letter-spacing: 5px;
 }
 
-.navbar__right--menu {
+.navbar-right--menu {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -119,7 +119,7 @@ a:active {
   color: var(--color-white-100);
 }
 
-.navbar__right--button {
+.navbar-right--button {
   text-align: center;
   width: 10vmax;
   padding: 1vmax 2vw;
@@ -128,7 +128,7 @@ a:active {
   border-color: var(--color-white-100);
 }
 
-.navbar__right--button:hover {
+.navbar-right--button:hover {
   background: var(--color-white-100);
   color: var(--color-dark-100);
   transition: all 0.2s ease-in-out;
@@ -138,7 +138,7 @@ a:active {
   !!! style MAIN HEADER 
 */
 
-.header--main {
+.header-main {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -146,17 +146,17 @@ a:active {
   gap: 10px;
 }
 
-.header--main--icon {
+.header-main--icon {
   width: 50px;
 }
 
-.header--main--text {
+.header-main--text {
   font-family: var(--font-fancy);
   font-size: var(--size-h1);
   color: var(--color-white-100);
 }
 
-.header--main--fill {
+.header-main--fill {
   width: 100%;
 }
 
